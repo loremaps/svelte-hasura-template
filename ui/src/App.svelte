@@ -1,11 +1,12 @@
 <script>
-	export let name;
+  import { setClient } from "svelte-apollo";
+  import { client } from "./apollo.js";
+
+  import Profile from "./Profile.svelte";
+
+  setClient(client);
 </script>
 
-<style>
-	h1 {
-		color: purple;
-	}
-</style>
+<h1>Hello</h1>
 
-<h1>Hello {name}!</h1>
+<Profile />
